@@ -23,6 +23,7 @@ h3{
 
 header{
     min-height: 70px;
+    /*outline: 1px solid red;*/
 }
 .clearfix::after{
     content: "";
@@ -31,11 +32,13 @@ header{
 }
 
 .container{
-    width: 900px;
+    position:relative;
+    width: 860px;
     margin: 0 auto;
     padding:0 20px;
     /*outline: 1px solid red;*/
 }
+
 .slide,
 .sub-menu,
 .slider-controls,
@@ -46,7 +49,7 @@ header{
 
 .slide{
     min-height: 575px;
-    outline: 1px solid yellow;
+    /*outline: 1px solid yellow;*/
 }
 
 .slide:nth-child(1){
@@ -61,22 +64,60 @@ header{
     /*outline: 1px solid green;*/
 }
 
-.main-menu{
+.main-menu,
+.user-block{
     float: left;
     list-style-type: none;
-    min-width: 451px;
     margin: 0;
     padding: 0;
+    font-size: 0;
     /*outline: 1px solid green;*/
 }
+.main-menu{
+    float: left;
+    width: 430px;
+}
+
 .user-block{
     float:right;
-    min-width: 262px;
-    /*outline: 1px solid green;*/
+    width: 260px;
+    text-align: right;
+}
+
+.main-menu li,
+.search,
+.login,
+.basket{
+    display: inline-block;
+    min-width: 36px;
+    padding: 23px 10px 15px;
+    /*outline: 1px solid orange;*/
+}
+
+.main-menu-item,
+.login,
+.basket{
+    min-width: 36px;
+    height: 32px;
+    border-radius: 15px;
+}
+
+.main-menu-item{
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.login,
+.basket{
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .mode-and-phone{
-    float: right;
+    position:absolute;
+    top: 75px;
+    right: 20px;
     width: 200px;
     height: 45px;
     text-align: right;
@@ -111,11 +152,16 @@ header{
     display: inline-block;
     width: 380px;
     min-height: 190px;
-    margin-left: 20px;
     padding: 20px;
     font-size: 14px;
     vertical-align: top;
     /*outline: 1px solid blue;*/
+}
+
+.promotions-item:nth-child(2n),
+.blog-news:nth-child(2n),
+.mailing-subscribe:nth-child(2n){
+    margin-left: 20px;
 }
 
 .product{
@@ -126,6 +172,9 @@ header{
     vertical-align: top;
     font-size: 14px;
     /*outline: 1px solid blue;*/
+}
+.product:nth-child(4n+1){
+    margin-left: 0;
 }
 
 .special-property{
@@ -143,7 +192,7 @@ header{
 
 .map-and-contacts{
     position: relative;
-    width: 100%;
+    width: 900px;
     min-height: 430px;
     margin-top 40px;
 }
@@ -151,9 +200,9 @@ header{
 .map{
     margin-top: 40px;
     margin-left: -20px;
-    margin-right: -20px;
+    margin-right: 20px;
     padding: 0;
-    width: 940px;
+    width: ;
     height: 430px;
     /*outline: 1px solid red;*/
 }
@@ -165,7 +214,7 @@ header{
 
 .contacts{
     position: absolute;
-    left: 598px;
+    right: 40px;
     top: 65px;
     width: 254px;
     height:244px;
@@ -178,6 +227,12 @@ header{
 .page-title{
     margin-top: 8px;
 }
+
+/*.filters-row{
+    padding: 0;
+    margin: 0;
+    outline:  1px solid red;
+}*/
 
 .filters{
     padding:0px;
@@ -193,10 +248,25 @@ header{
     display: inline-block;
     min-height: 58px;
     margin-top: 15px;
+    margin-right: 17px;
     vertical-align: top;
     font-size: 16px;
     line-height: 18px;
     /*outline:  1px solid red;*/
+}
+
+.filter label{
+    margin:0 15px;
+}
+
+.filter-backing{
+    display: inline-block;
+    background-color: #a8b9b0;
+    border-radius: 11px;
+}
+
+.filter-button{
+    display: inline-block;
 }
 
 .product-fillers-fildset{
@@ -212,6 +282,7 @@ header{
 .catalog{
     margin-top: 30px;
     min-height: 900px;
+    font-size: 0;
 }
 
 .switch-pages{
@@ -222,20 +293,29 @@ header{
 .main-footer {
     padding-top: 35px;
     padding-bottom: 25px;
+    font-size: 0;
 }
 
 .footer-social {
     float: left;
     min-width: 200px;
     min-height: 40px;
+    font-size: 12px;
+    /*outline:  1px solid red;*/
 }
 
 .footer-menu{
     float: left;
+    min-width: auto;
+    margin: 0 20px;
+    font-size: 13px;
+    /*outline:  1px solid red;*/
 }
 
 .footer-copyright {
     float: right;
     min-width: 200px;
     min-height: 65px;
+    font-size: 12px;
+    /*outline:  1px solid red;*/
 }
