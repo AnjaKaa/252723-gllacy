@@ -8,7 +8,7 @@
   <body>
     <div class="site-wrapper">
       <div class="content-wrapper">
-        <!--Шапка -->
+        <!-- Шапка -->
         <header class="main-header>">
           <div class="container">
             <a class="logo-header" href="index.html">
@@ -115,18 +115,19 @@
                 </div>
               </div>
             </div>
+            <div class="mode-and-phone">
+              <div class="gllacy-operation-mode">
+                С 10 до 20, ежедневно
+              </div>
+              <div class="gllacy-phone">
+                8 812 450-25-25
+              </div>
+            </div>
           </div>
+
         </header>
-        <main class="container">
-          <div class="mode-and-phone">
-            <div class="gllacy-operation-mode">
-              С 10 до 20, ежедневно
-            </div>
-            <div class="gllacy-phone">
-              8 812 450-25-25
-            </div>
-          </div>
-          <div class="breadcrumbs">
+        <main class="container clearfix">
+          <div class="breadcrumbs clearfix">
             <a class="breadcrumbs-item" href="index.html">
               Главная
             </a>
@@ -140,53 +141,66 @@
           <h1 class="page-title">Сливочное мороженое</h1>
           <div class="filters">
             <form  action="#" method="get">
-              <div class="filters-first-row">
+              <div class="filters-row filters-first-row">
                 <div class="filter">
                   <label class="fieldset-title" for="sort-product">
                     Сортировка
                   </label>
-                  <select id="sort-product" name="sort-product">
-                    <option value="sort-by-popularity">по популярности</option>
-                    <option value="sort-by-price">по цене</option>
-                  </select>
+                  <br>
+                  <div class="filter-backing filter-sort-product">
+                    <select id="sort-product" name="sort-product">
+                      <option value="sort-by-popularity">по популярности</option>
+                      <option value="sort-by-price">по цене</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="filter">
                   <label class="fieldset-title" for="pricecount">
                     Цена: 100 руб. - 500 руб.
                   </label>
-                  <input type="range" id="pricecount" name="pricecount" min="100" max="500" step="5">
+                  <br>
+                  <div class="filter-backing filter-pricecount">
+                    <input type="range" id="pricecount" name="pricecount" min="100" max="500" step="5">
+                  </div>
                 </div>
                 <div class="filter">
                   <p  class="fieldset-title">
                     Жирность:
                   </p>
-                  <input type="radio" name="product-fatness" id="product-fatness-0" value="0">
-                  <label for="product-fatness-0">0%</label>
-                  <input type="radio" name="product-fatness" id="product-fatness-10" value="10" checked>
-                  <label for="product-fatness-10">10%</label>
-                  <input type="radio" name="product-fatness" id="product-fatness-30" value="30">
-                  <label for="product-fatness-30">30%</label>
-                  <input type="radio" name="product-fatness" id="product-fatness-above30" value="100">
-                  <label for="product-fatness-above30">выше30%</label>
+                  <div class="filter-backing filter-fatness">
+                    <input type="radio" name="product-fatness" id="product-fatness-0" value="0">
+                    <label for="product-fatness-0">0%</label>
+                    <input type="radio" name="product-fatness" id="product-fatness-10" value="10" checked>
+                    <label for="product-fatness-10">10%</label>
+                    <input type="radio" name="product-fatness" id="product-fatness-30" value="30">
+                    <label for="product-fatness-30">30%</label>
+                    <input type="radio" name="product-fatness" id="product-fatness-above30" value="100">
+                    <label for="product-fatness-above30">выше30%</label>
+                  </div>
                 </div>
               </div>
-              <div class="filters-second-row">
+              <div class="filters-row filters-second-row">
                 <div class="filter">
-                  <p class="fieldset-title">
-                    Наполнители:
-                  </p>
-                  <input type="checkbox" id="product-fillers-1" checked>
-                  <label for="product-fillers-1">шоколадные</label>
-                  <input type="checkbox" id="product-fillers-2" checked>
-                  <label for="product-fillers-2">сахарные присыпки</label>
-                  <input type="checkbox" id="product-fillers-3">
-                  <label for="product-fillers-3">фрукты</label>
-                  <input type="checkbox" id="product-fillers-4">
-                  <label for="product-fillers-4">сиропы</label>
-                  <input type="checkbox" id="product-fillers-5">
-                  <label for="product-fillers-5">джемы</label>
+                    <p class="fieldset-title">
+                      Наполнители:
+                    </p>
+                    <div class="filter-backing product-fillers-fildset">
+                      <input type="checkbox" id="product-fillers-1" checked>
+                      <label for="product-fillers-1">шоколадные</label>
+                      <input type="checkbox" id="product-fillers-2" checked>
+                      <label for="product-fillers-2">сахарные присыпки</label>
+                      <input type="checkbox" id="product-fillers-3">
+                      <label for="product-fillers-3">фрукты</label>
+                      <input type="checkbox" id="product-fillers-4">
+                      <label for="product-fillers-4">сиропы</label>
+                      <input type="checkbox" id="product-fillers-5">
+                      <label for="product-fillers-5">джемы</label>
+                    </div>
                 </div>
-                <button class="filter-button" type="submit">Применить</button>
+                <div class="filter-backing filter-backing-button">
+                  <button class="filter-button" type="submit">Применить</button>
+                </div>
+
               </div>
             </form>
           </div>
@@ -361,7 +375,7 @@
           </div>
         </main>
         <footer class="main-footer">
-          <div class="container">
+          <div class="container clearfix">
             <section class="footer-social">
               <a class="social-btn social-btn-tw" href="#">Twitter</a>
               <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
