@@ -147,7 +147,7 @@
                     Сортировка
                   </label>
                   <br>
-                  <div class="filter-backing">
+                  <div class="filter-backing filter-sort-product">
                     <select id="sort-product" name="sort-product">
                       <option value="sort-by-popularity">по популярности</option>
                       <option value="sort-by-price">по цене</option>
@@ -159,16 +159,15 @@
                     Цена: 100 руб. - 500 руб.
                   </label>
                   <br>
-                  <div class="filter-backing">
+                  <div class="filter-backing filter-pricecount">
                     <input type="range" id="pricecount" name="pricecount" min="100" max="500" step="5">
                   </div>
                 </div>
                 <div class="filter">
-                  <label  class="fieldset-title" for="product-fatness">
+                  <p  class="fieldset-title">
                     Жирность:
-                  </label>
-                  <br>
-                  <div class="filter-backing">
+                  </p>
+                  <div class="filter-backing filter-fatness">
                     <input type="radio" name="product-fatness" id="product-fatness-0" value="0">
                     <label for="product-fatness-0">0%</label>
                     <input type="radio" name="product-fatness" id="product-fatness-10" value="10" checked>
@@ -182,12 +181,10 @@
               </div>
               <div class="filters-row filters-second-row">
                 <div class="filter">
-                  <fieldset class="product-fillers-fildset">
-                    <legiend class="fieldset-title">
+                    <p class="fieldset-title">
                       Наполнители:
-                    </legend>
-                    <br>
-                    <div class="filter-backing">
+                    </p>
+                    <div class="filter-backing product-fillers-fildset">
                       <input type="checkbox" id="product-fillers-1" checked>
                       <label for="product-fillers-1">шоколадные</label>
                       <input type="checkbox" id="product-fillers-2" checked>
@@ -199,9 +196,11 @@
                       <input type="checkbox" id="product-fillers-5">
                       <label for="product-fillers-5">джемы</label>
                     </div>
-                  </fieldset>
                 </div>
-                <button class="filter-button" type="submit">Применить</button>
+                <div class="filter-backing filter-backing-button">
+                  <button class="filter-button" type="submit">Применить</button>
+                </div>
+
               </div>
             </form>
           </div>

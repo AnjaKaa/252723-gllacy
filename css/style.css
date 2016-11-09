@@ -4,7 +4,6 @@ body{
     color: black;
     text-transform: uppercase;
     font-family: "Roboto",Arial, sans-serif;
-
 }
 
 h1{
@@ -25,17 +24,23 @@ header{
     min-height: 70px;
     /*outline: 1px solid red;*/
 }
+
 .clearfix::after{
     content: "";
     clear: both;
     display: table;
 }
 
+.content-wrapper{
+    min-width: 900px;
+    max-width: 1200px;
+    margin: 0 auto;;
+}
 .container{
     position:relative;
     width: 860px;
     margin: 0 auto;
-    padding:0 20px;
+    padding:0 2.3%;
     /*outline: 1px solid red;*/
 }
 
@@ -192,15 +197,15 @@ header{
 
 .map-and-contacts{
     position: relative;
-    width: 900px;
+    width: 100%;
     min-height: 430px;
-    margin-top 40px;
+    margin:0 auto;
+    margin-top: 40px;
+
 }
 
 .map{
     margin-top: 40px;
-    margin-left: -20px;
-    margin-right: 20px;
     padding: 0;
     width: ;
     height: 430px;
@@ -214,11 +219,12 @@ header{
 
 .contacts{
     position: absolute;
-    right: 40px;
-    top: 65px;
+    right: 20px;
+    top: -365px;
     width: 254px;
     height:244px;
     padding: 30px 25px;
+    font-size: 14px;
     background-color: white;
     border-radius: 5%;
     /*outline:  1px solid red;*/
@@ -228,11 +234,6 @@ header{
     margin-top: 8px;
 }
 
-/*.filters-row{
-    padding: 0;
-    margin: 0;
-    outline:  1px solid red;
-}*/
 
 .filters{
     padding:0px;
@@ -241,40 +242,83 @@ header{
 
 .filters-row{
     font-size: 0;
+    margin: 0;
+    padding: 0;
   /*outline:  1px solid green;*/
 }
 
-.filter{
+.filter
+{
     display: inline-block;
     min-height: 58px;
+    margin: 0;
+    padding: 0;
     margin-top: 15px;
-    margin-right: 17px;
+    margin-right: 15px;
     vertical-align: top;
     font-size: 16px;
     line-height: 18px;
-    /*outline:  1px solid red;*/
+    /*outline:  1px solid blue;*/
 }
 
-.filter label{
-    margin:0 15px;
+.filter:nth-last-child(1){
+    margin-right:0;
 }
 
-.filter-backing{
+.filter-backing
+{
     display: inline-block;
+    min-height: 27px;
+    margin-top: 7px;
+    padding: 5px 15px;
     background-color: #a8b9b0;
-    border-radius: 11px;
+    /*outline: 1px solid red;*/
+    border-radius: 12px;
+}
+.filter-backing{
+    vertical-align: top;
 }
 
-.filter-button{
-    display: inline-block;
+.filter-backing-button{
+    width: 114px;
+    vertical-align: bottom;
+}
+
+.filter-sort-product{
+    width: 164px;
+}
+
+.filter-pricecount{
+    width: 190px;
+}
+
+.filter-fatness{
+    width: 386px;
 }
 
 .product-fillers-fildset{
-    padding: 15px;
-    border: none;
+    width: 671px;
+}
+
+/*.filter-sort-product input,
+.filter-pricecount input,
+.filter-fatness input,
+.product-fillers-fildset input,
+.filter-backing-button
+{
+    margin: 0;
+}*/
+
+.filter-button{
+    display:block;
+    width: 100%;
+    height: 100%
+    display: inline-block;
 }
 
 .fieldset-title{
+    margin: 0 15px;
+    padding: 0;
     font-size: 14px;
     line-height: 16px;
 }
@@ -298,15 +342,14 @@ header{
 
 .footer-social {
     float: left;
-    min-width: 200px;
-    min-height: 40px;
+    width: 22.2%;
     font-size: 12px;
     /*outline:  1px solid red;*/
 }
 
 .footer-menu{
     float: left;
-    min-width: auto;
+    width: 48.8%;
     margin: 0 20px;
     font-size: 13px;
     /*outline:  1px solid red;*/
@@ -314,8 +357,7 @@ header{
 
 .footer-copyright {
     float: right;
-    min-width: 200px;
-    min-height: 65px;
+    width: 22.2%;
     font-size: 12px;
     /*outline:  1px solid red;*/
 }
