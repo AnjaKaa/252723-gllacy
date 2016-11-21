@@ -244,7 +244,7 @@
                   <strong class="contacts-phone-nmber">8 812 450-25-25</strong><br>
                   (с 10 до 20 ежедневно)
                 </p>
-                  <a class="btn" href="#">Форма обратной связи</a>
+                  <a class="btn btn-feedback-form" href="#">Форма обратной связи</a>
               </section>
             </div>
           </article>
@@ -275,5 +275,58 @@
         </footer>
       </div><!--"content-wrapper"  -->
     </div><!--"site-wrapper"  -->
+    <div class="overlay"></div>
+    <div class="modal-content">
+      <p>Мы обязательно вам ответим!</p>
+       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="feedback-form" action="" method="post">
+        <label for="feedback-form-name">
+          <input  class="feedback-form-name"  type="text" name="feedback-form-name" placeholder="Как вас зовут?">
+        </label>
+        <label>
+          <input class="feedback-form-email"  type="email"  name="feedback-form-email" placeholder="Ваша почта для ответа?">
+        </label>
+        <label for="feedback-form-content" >
+          <textarea  class="feedback-form-content"  placeholder="Напишите что-нибудь..." name="feedback-form-content"></textarea>
+        </label>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+    </div>
+    <script>
+     var link = document.querySelector(".btn-feedback-form");
+     var popup = document.querySelector(".modal-content");
+	 var overlay = document.querySelector(".overlay");
+     var close = popup.querySelector(".modal-content-close");
+     var form = popup.querySelector("form");
+     var ffname = popup.querySelector("[name=feedback-form-name]");
+     var ffemail = popup.querySelector("[name=feedback-form-email]");
+     var ffcontent = popup.querySelector("[name=feedback-form-content]");
+     link.addEventListener("click", function(event) {
+       event.preventDefault();
+       popup.classList.add("modal-content-show");
+	   overlay.classList.add("overlay-show");
+       ffname.focus();
+     });
+
+     close.addEventListener("click", function(event) {
+       event.preventDefault();
+       popup.classList.remove("modal-content-show");
+	   overlay.classList.remove("overlay-show");
+     });
+     form.addEventListener("submit", function(event) {
+       if (!ffname.value || !ffemail.value || !ffcontent.value) {
+         event.preventDefault();
+         console.log("Нужно ввести имя,почту и сообщение");
+       }
+      });
+      window.addEventListener("keydown", function(event) {
+       if (event.keyCode === 27) {
+         if (popup.classList.contains("modal-content-show")) {
+           popup.classList.remove("modal-content-show");		   
+		   overlay.classList.remove("overlay-show");
+         }
+       }
+     });
+   </script>
   </body>
 </html>
