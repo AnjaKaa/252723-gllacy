@@ -6,8 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="site-wrapper-item">
@@ -47,25 +45,42 @@
         </li>
         </ul>
         <div class="user-block">
-        <div class="search">
-          <a class="user-block-item" href="#">
-          <span></span>
-          </a>
-          <form action="#" method="get">
-          <button type="submit">Поиск</button>
-          <input name="search" placeholder="Что ищем?" type="search">
-          </form>
-        </div>
-        <div class="login">
-          <a class="user-block-item" href="#">
-          <span>Вход</span>
-          </a>
-          <form action="#" method="get">
-          <input name="email" placeholder="Электронная почта" type="email" required>
-          <input name="password" placeholder="Пароль" type="password" required>
-          <button  class="btn" type="submit">Вход</button>
-          </form>
-        </div>
+          <div class="search">
+            <a  class="user-block-item"  href="#">
+			  <span></span>
+			</a>
+            <form action="#" method="get">
+              <button type="submit">Поиск</button>
+              <p>
+                <input name="search" placeholder="Что ищем?" type="search" required>
+                <label>Что ищем?</label>
+              </p>
+            </form>
+          </div>
+          <div class="login">
+            <a class="user-block-item" href="#">
+              <span>Вход</span>
+            </a>
+            <form class="clearfix" action="#" method="get">
+              <p>
+                <input type="email" name="email" placeholder="Электронная почта"  required>
+                <label for="email">Электронная почта<label>
+              </p>
+              <p>
+                <input type="password" name="password" placeholder="Пароль"  required>
+                <label for="password">Пароль<label>
+              </p>
+              <button  class="btn" type="submit">Войти</button>
+              <div  class="ref" >
+                <p>
+                  <a href="#">Забыли пароль?</a>
+                </p>
+                <p>
+                  <a href="#">Новая&nbsp;регистрация</a>
+                </p>
+              </div>
+            </form>
+          </div>
         <div class=" basket-not-empty">
           <a class="user-block-item" href="#">
           <span class="basket-span">
@@ -196,7 +211,7 @@
         <div class="filters-row filters-form filters-second-row">
           <div class="filter">
             <p class="fieldset-title">
-            Наполнители:
+              Наполнители:
             </p>
             <div class="filter-backing product-fillers-fildset">
             <input type="checkbox" id="product-fillers-1" checked>
