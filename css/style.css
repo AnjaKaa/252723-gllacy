@@ -19,7 +19,7 @@ h1{
 h2{
   font-size: 35px;
   line-height: 41px;
-}
+  }
 
 h3{
   font-size: 24px;
@@ -134,17 +134,19 @@ input:focus {
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
-  background: linear-gradient(to bottom, #f26843,#e74a35);
+  background: linear-gradient(to bottom, #f26843 0%,#e74a35 100%);
   border-radius: 32px;
-  text-shadow: 2px 2px 2px #a0200b;
+  text-shadow: 0 2px 5px rgba(160,32,11, 0.76);
 }
 .slide-btn:hover {
   color: #ffffff;
+  background:  linear-gradient(to bottom, #ec6f5e 0%, #f58669 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .slide-btn:active {
   color: #ffffff;
+  background:  linear-gradient(to bottom, #d74632 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 .slider-controls {
@@ -193,20 +195,21 @@ input:focus {
   color: #ffffff;
   white-space: nowrap;
   padding: 10px 20px;
-  border:none;
   border-radius: 20px;
-  background: linear-gradient(to bottom, #f26843, #e74b36);
+  background: linear-gradient(to bottom, #f26843  0%, #e74b36 100%);
+  box-shadow: 0 2px 2px rgba(172,16,0,0.64);
 }
+
 .btn:hover {
   color: #ffffff;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-  background:linear-gradient(to bottom,#e74a35, #f26843);
+  background: linear-gradient(to bottom, #ec6f5e 0%, #f58669 100%);
+  box-shadow: 0 2px 2px #ab1000;
 }
 
 .btn:active {
   color: #ffffff;
+  background: linear-gradient(to bottom, #d64531 0%,#e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-  background:linear-gradient(to top #c63e2b,#e1613e)
 }
 
 .slide {
@@ -571,7 +574,8 @@ input:focus {
 .search p,
 .login p {
   position: relative;
-  margin:0;
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .search label,
@@ -606,6 +610,7 @@ input:focus {
   display: block;
   margin: 0;
   padding-left: 15px;
+  padding-right: 15px;
   width: 309px;
   min-height: 43px;
   font-size: 14px;
@@ -624,7 +629,7 @@ input:focus {
   margin: 0;
   margin-bottom: 20px;
   padding-left: 15px;
-  width: 230px;
+  width: 215px;
   height: 40px;
   font-size: 14px;
   font-weight: 400;
@@ -640,7 +645,7 @@ input:focus {
 }
 .ref a{
   font-size: 13px;
-  line-height: 24px;
+  line-height: 16px;
 }
 
 .basket-not-empty .basket-span{
@@ -657,56 +662,60 @@ input:focus {
 .basket-content {
   right:0px;
   top: 50px;
-  width: 497px;
+  width: 500px;
   min-height: 80px;
   padding: 20px;
   border-radius: 5px;
   color: #d3d3d2;
   background-color: #f8f7f4;
 }
+.product-photo-small{
+  margin-left: 20px 60px;
+}
 
 .basket-content table{
   text-align: left;
   font-size: 13px;
   line-height: 16px;
+  font-weight: 400;
   border-bottom: 2px solid #cacac7;
 }
 
 .basket-content td{
-  padding:5px;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  vertical-align: top;
 }
 
 .basket-content td:nth-child(1){
-  width:33px;
-  height:13px;
-  padding:10px;
+  padding-top:0;
+  padding-left:20px;
+  width: 40px;
 }
 
 .basket-content td:nth-child(2){
-  width:33px;
-  height:13px;
-  padding:10px;
+  width: 300px;
 }
 
 .basket-content td:nth-child(3){
-  width:215px;
-  padding: 15px;
+  padding-left: 15px;
+  width: 130px;
 }
 
 .basket-content td:nth-child(4){
-  width: 130px;
-  padding: 15px 10px;
-}
-
-.basket-content td:nth-child(5){
-  width: 60px;
-  padding: 15px 10px;
+  padding-left: 25px;
+  width:70px;
 }
 
 .remove-from-basket{
+  position: absolute;
+  top:8px;
+  left:-5px;
   width: 15px;
   height: 15px;
   margin-right: 15px;
+  margin-top: 0;
   font-size: 0;
   background-color: transparent;
   border: 0;
@@ -725,7 +734,7 @@ input:focus {
   display: inline-block;
   color: #333333;
   width: 100%;
-  margin: 15px 0;
+  margin: 10px 0 15px;
   text-align: right;
   font-size: 15px;
   line-height: 18px;
@@ -738,6 +747,11 @@ input:focus {
   color: #323232;
 }
 .basket-content .btn{
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight:700;
   display: inline-block;
   color: #ffffff;
 }
@@ -998,10 +1012,10 @@ input:focus {
 }
 .product a:hover,
 .product a:active{
-  color: #ea5944;
+  color: #ffffff;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   box-shadow: inset 0 -1px 0 #c5d7cd;
 }
@@ -1021,8 +1035,8 @@ input:focus {
 }
 
 .special-properties{
-  margin-top: 14px;
-  padding-bottom: 20px;
+  margin-top: 15px;
+  padding-bottom: 18px;
   font-size: 0;
   color: #323232;
   background:#e4d9c2 url("../img/wafer_background.png");
@@ -1032,7 +1046,7 @@ input:focus {
 
 .special-properties h3{
   margin-top: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   padding: 25px 20px 0;
   text-align: left;
   font-size: 24px;
@@ -1045,8 +1059,9 @@ input:focus {
 .special-property{
   display: inline-block;
   position: relative;
-  width: 343px;
-  margin-left: 77px;
+  width: 344px;
+  margin-left: 76px;
+  margin-bottom: 1px;
   min-height: 108px;
   font-size: 16px;
   font-weight: 400;
@@ -1054,15 +1069,16 @@ input:focus {
   line-height: 22px;
   vertical-align: top;
 }
+
 .special-property p{
-  margin: 20px auto 6px;
+  margin: 18px auto 4px;
   /*padding-right: 5px;*/
 }
 .special-property::before{
  content: "";
  position: absolute;
- top: 4px;
- left: -57px;
+ top: 5px;
+ left: -56px;
  width: 49px;
  height: 49px;
  background: url("../img/sprite.png") no-repeat center;
@@ -1129,7 +1145,7 @@ input:focus {
   display: inline-block;
   width: 192px;
   margin-left: 6px;
-  padding-left: 12px; 
+  padding-left: 12px;
   min-height: 38px;
   font-size: 16px;
   line-height: 22px;
@@ -1321,7 +1337,7 @@ line-height: 24px;
   position: absolute;
   top: 15px;
   left: 25%;
-  width: 100px;
+  width: 90px;
   height: 4px;
   background-color: #f8f7f4;
 }
@@ -1337,6 +1353,7 @@ line-height: 24px;
   height: 20px;
   border-radius: 50%;
   background-color: #f8f7f4;
+  box-shadow:  0 2px 2px #898989;
   cursor: pointer;
 }
 
@@ -1351,7 +1368,13 @@ line-height: 24px;
   height: 20px;
   border-radius: 50%;
   background-color: #f8f7f4;
+  box-shadow:  0 2px 2px #898989;
   cursor: pointer;
+}
+
+.filter-pricecount .marker-begin:hover,
+.filter-pricecount .marker-end:hover {
+  border: 1px solid  #f8f7f4;
 }
 
 .filter-fatness{
@@ -1438,7 +1461,7 @@ line-height: 24px;
   right: 0;
   margin-left: 3px;
   margin-bottom: 3px;
-  padding: 9px 27px;
+  padding: 8px 26px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -1447,13 +1470,13 @@ line-height: 24px;
   color: #ffffff;
   background-color: rgba(255,255,255,0.3);
   border: 2px solid #ffffff;
-  border: none;
   border-radius: 20px;
 
 }
 
 .filter-button:hover,
 .filter-button:active {
+  padding: 9px 27px;
   color: #353535;
   background-color: #ffffff;
   border: none;
@@ -1498,7 +1521,7 @@ line-height: 24px;
 .switch-pages-item {
   display: inline-block;
   padding: 0;
-  width: 26px;
+  width: 25px;
   height: 25px;
   font-size: 16px;
   font-weight: 700;
@@ -1605,6 +1628,7 @@ line-height: 24px;
   background: url("../img/sprite.png") no-repeat;
   opacity: 0.4;
 }
+
 .social-btn::after{
   content: "";
   position: absolute;
@@ -1613,14 +1637,11 @@ line-height: 24px;
   transform: translate(-50%,-50%);
 }
 
-
 .social-btn:hover::before,
 .social-btn:active::before
 {
   opacity:1;
 }
-
-
 
 .social-btn-tw::before,
 .social-btn-tw:hover::before {
@@ -1714,18 +1735,24 @@ line-height: 24px;
 }
 
 .logo-htmlacademy {
+  position:absolute;
   margin-top: 17px;
   margin-bottom: 0;
 }
 
-.footer-copyright p{
-  margin: 0;
+.footer-copyright{
+  position: relative;
 }
 
-.footer-copyright p>a{
+.footer-copyright p{
+  margin-top:55px;
+}
+
+.footer-copyright a{
   color:#ffffff;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 12px;
+  font-weight: 400;
   text-decoration: none;
   box-shadow: inset 0 -1px 0 ;
   box-shadow: inset 0 -1px 0 rgba(255,255,255,0.3);
