@@ -50,20 +50,34 @@
               <a  class="user-block-item"  href="#"><span></span></a>
               <form action="#" method="get">
                 <button type="submit">Поиск</button>
-                <input name="search" placeholder="Что ищем?" type="search" required>
+                <p>
+                  <input name="search" placeholder="Что ищем?" type="search" required>
+                  <label>Что ищем?</label>
+                </p>
               </form>
             </div>
             <div class="login">
               <a class="user-block-item" href="#">
                 <span>Вход</span>
               </a>
-              <form action="#" method="get">
-                <input name="email" placeholder="Электронная почта" type="email" required>
-                <input name="password" placeholder="Пароль" type="password" required>
+              <form class="clearfix" action="#" method="get">
+                <p>
+                  <input type="email" name="email" placeholder="Электронная почта"  required>
+                  <label for="email">Электронная почта<label>
+                </p>
+                <p>
+                  <input type="password" name="password" placeholder="Пароль"  required>
+                  <label for="password">Пароль<label>
+                </p>
                 <button  class="btn" type="submit">Войти</button>
                 <div  class="ref" >
-                <a href="#">Забыли пароль?</a><br>
-                <a href="#">Новая регистрация</a></div>
+                  <p>
+                    <a href="#">Забыли пароль?</a>
+                  </p>
+                  <p>
+                    <a href="#">Новая&nbsp;регистрация</a>
+                  </p>
+                </div>
               </form>
             </div>
             <div class="basket">
@@ -277,25 +291,29 @@
     </div><!--"site-wrapper"  -->
     <div class="overlay"></div>
     <div class="modal-content">
-      <p>Мы обязательно вам ответим!</p>
+      <p class="modal-content-title">Мы обязательно вам ответим!</p>
        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
       <form class="feedback-form" action="" method="post">
-        <label for="feedback-form-name">
-          <input  class="feedback-form-name"  type="text" name="feedback-form-name" placeholder="Как вас зовут?">
-        </label>
-        <label>
-          <input class="feedback-form-email"  type="email"  name="feedback-form-email" placeholder="Ваша почта для ответа?">
-        </label>
-        <label for="feedback-form-content" >
-          <textarea  class="feedback-form-content"  placeholder="Напишите что-нибудь..." name="feedback-form-content"></textarea>
-        </label>
+        <p>
+          <input  class="feedback-form-name"  type="text" name="feedback-form-name"
+           placeholder="Как вас зовут?" required>
+           <label for="feedback-form-name">Как вас зовут?</label>
+        </p>
+        <p>
+          <input class="feedback-form-email"  type="email"  name="feedback-form-email" placeholder="Ваша почта для ответа?" required>
+          <label>Ваша почта для ответа?</label>
+        </p>
+        <p>
+          <textarea class="feedback-form-content" name="feedback-form-content" placeholder="Напишите что-нибудь..."></textarea>
+          <label>Сообщение</label>
+        </p>
         <button class="btn" type="submit">Отправить</button>
       </form>
     </div>
     <script>
      var link = document.querySelector(".btn-feedback-form");
      var popup = document.querySelector(".modal-content");
-	 var overlay = document.querySelector(".overlay");
+	   var overlay = document.querySelector(".overlay");
      var close = popup.querySelector(".modal-content-close");
      var form = popup.querySelector("form");
      var ffname = popup.querySelector("[name=feedback-form-name]");
@@ -322,7 +340,7 @@
       window.addEventListener("keydown", function(event) {
        if (event.keyCode === 27) {
          if (popup.classList.contains("modal-content-show")) {
-           popup.classList.remove("modal-content-show");		   
+           popup.classList.remove("modal-content-show");
 		   overlay.classList.remove("overlay-show");
          }
        }
