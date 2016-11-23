@@ -67,6 +67,12 @@ input {
   font-weight: 700;
 }
 
+
+input:hover {
+  border: 1px solid #d3d3d2;
+  box-shadow: inset 0 0 2px #d3d3d2;
+}
+
 input:focus {
   border: 1px solid #afcdea;
   box-shadow: inset 0 0 2px #afcdea;
@@ -98,6 +104,7 @@ input:focus {
 }
 
 .site-wrapper-item  {
+  background: -webkit-linear-gradient(top , rgba(255,255,255,0.3) 0.01%, #849d8f 20%);
   background: linear-gradient(to bottom , rgba(255,255,255,0.3) 0.01%, #849d8f 20%);
 }
 
@@ -105,6 +112,7 @@ input:focus {
   width: 900px;
   margin: 0 auto;
   padding: 0;
+  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
   transition: background-image 0.5s ease, background-color 0.5s ease;
  /* background-color: #90a69a;*/
 }
@@ -134,18 +142,21 @@ input:focus {
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
+  background: -webkit-linear-gradient(top, #f26843 0%,#e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%,#e74a35 100%);
   border-radius: 32px;
   text-shadow: 0 2px 5px rgba(160,32,11, 0.76);
 }
 .slide-btn:hover {
   color: #ffffff;
+  background:  -webkit-linear-gradient(top, #ec6f5e 0%, #f58669 100%);
   background:  linear-gradient(to bottom, #ec6f5e 0%, #f58669 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .slide-btn:active {
   color: #ffffff;
+  background:  -webkit-linear-gradient(top, #d74632 0%, #e1613e 100%);
   background:  linear-gradient(to bottom, #d74632 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -178,7 +189,8 @@ input:focus {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
   background: #ffffff;
   opacity: 0.5;
 }
@@ -197,18 +209,21 @@ input:focus {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
+  background: -webkit-linear-gradient(top, #f26843  0%, #e74b36 100%);
   background: linear-gradient(to bottom, #f26843  0%, #e74b36 100%);
   box-shadow: 0 2px 2px rgba(172,16,0,0.64);
 }
 
 .btn:hover {
   color: #ffffff;
+  background: -webkit-linear-gradient(top, #ec6f5e 0%, #f58669 100%);
   background: linear-gradient(to bottom, #ec6f5e 0%, #f58669 100%);
   box-shadow: 0 2px 2px #ab1000;
 }
 
 .btn:active {
   color: #ffffff;
+  background: -webkit-linear-gradient(top, #d64531 0%,#e1613e 100%);
   background: linear-gradient(to bottom, #d64531 0%,#e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -602,6 +617,12 @@ input:focus {
   left: 15px;
   color: #afcdea;
 }
+.search input:focus,
+.login input:focus
+{
+    border: 1px solid #afcdea;
+    box-shadow:inset 0 0 2px #afcdea;
+}
 
 .login button {
   float: left;
@@ -768,10 +789,12 @@ input:focus {
 }
 
 .remove-from-basket::before{
-  transform:  translateX(-50%) rotate(45deg);
+  -webkit-transform:  translateX(-50%) rotate(45deg);
+          transform:  translateX(-50%) rotate(45deg);
 }
 .remove-from-basket::after{
-  transform:translateX(-50%) rotate(-45deg);
+  -webkit-transform:translateX(-50%) rotate(-45deg);
+          transform:translateX(-50%) rotate(-45deg);
 }
 
 .user-block>.search:hover form,
@@ -1031,7 +1054,8 @@ input:focus {
   display: block;
   bottom: -38px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 4;
 }
 
@@ -1448,7 +1472,8 @@ line-height: 24px;
   left: 5px;
   width: 8px;
   height: 4px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   border-left: 3px solid #ffffff;
   border-bottom: 3px solid #ffffff;
   background-position: -4px -212px;
@@ -1574,12 +1599,14 @@ line-height: 24px;
 }
 
 .switch-pages-outside::before {
-  transform: translate(-50%,-50%) rotate(45deg);
+  -webkit-transform: translate(-50%,-50%) rotate(45deg);
+          transform: translate(-50%,-50%) rotate(45deg);
 }
 
 .switch-pages-not-outside::before{
   border-color: #ffffff;
-  transform: rotate(-135deg) translate(4px,3px) ;
+  -webkit-transform: rotate(-135deg) translate(4px,3px) ;
+          transform: rotate(-135deg) translate(4px,3px) ;
 }
 
 .switch-pages-not-outside{
@@ -1625,7 +1652,8 @@ line-height: 24px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
   background: url("../img/sprite.png") no-repeat;
   opacity: 0.4;
 }
@@ -1635,7 +1663,8 @@ line-height: 24px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
 }
 
 .social-btn:hover::before,
@@ -1760,13 +1789,26 @@ line-height: 24px;
 }
 
 /* Всплывающая форма */
-@keyframes ffanim {
+@-webkit-keyframes ffanim {
   0%  {
-    transform: translate(-50%,100%);
+    -webkit-transform: translate(-50%,100%);
+            transform: translate(-50%,100%);
   }
 
   100%  {
-    transform: translateY(-50%,50%);
+    -webkit-transform: translateY(-50%,50%);
+            transform: translateY(-50%,50%);
+  }
+}
+@keyframes ffanim {
+  0%  {
+    -webkit-transform: translate(-50%,100%);
+            transform: translate(-50%,100%);
+  }
+
+  100%  {
+    -webkit-transform: translateY(-50%,50%);
+            transform: translateY(-50%,50%);
   }
 }
 
@@ -1775,7 +1817,8 @@ line-height: 24px;
   display: none;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 479px;
   padding: 20px 25px;
   color: #000000;
@@ -1792,7 +1835,8 @@ line-height: 24px;
 }
 .modal-content-show {
   display: block;
-  animation: ffanim 0.5s;
+  -webkit-animation: ffanim 0.5s;
+          animation: ffanim 0.5s;
 }
 .modal-content-close {
   position: absolute;
@@ -1817,11 +1861,13 @@ line-height: 24px;
   border-radius: 1px;
 }
 .modal-content-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .modal-content-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .feedback-form-name,
