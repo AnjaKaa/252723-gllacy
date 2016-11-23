@@ -1824,6 +1824,7 @@ line-height: 24px;
   color: #000000;
   background-color: #f8f7f4;
   border-radius: 5px;
+  box-sizing: border-box;
   z-index: 1000;
 }
 
