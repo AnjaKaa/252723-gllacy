@@ -991,7 +991,7 @@ input:focus {
     z-index: 4;
 }
 
-.product::after {
+.product-hit::after {
     content: "";
     position: absolute;
     display: block;
@@ -1556,10 +1556,6 @@ input:focus {
     margin-top: 3px;
     min-height: 900px;
     font-size: 0;
-}
-
-.catalog product:after {
-    display: none;
 }
 
 .catalog .product {
